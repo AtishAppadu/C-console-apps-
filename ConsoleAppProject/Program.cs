@@ -5,11 +5,10 @@ namespace ConsoleAppProject
 {
     /// <summary>
     /// The main method in this class is called first
-    /// when the application is started.  It will be used
-    /// to start Apps 01 to 05 for CO453 CW1
+    /// when the application is started.
     /// 
     /// This Project has been modified by:
-    /// Derek Peacock 14/12/2020
+    /// Atish 
     /// </summary>
     public static class Program
     {
@@ -22,7 +21,9 @@ namespace ConsoleAppProject
             Console.Beep();
 
             DistanceConverter converter = new DistanceConverter();
-            converter.Run();
+            converter.MilesToFeet();
+            converter.FeetToMiles();
+            converter.MilesToMetres();
         }
     }
 }
