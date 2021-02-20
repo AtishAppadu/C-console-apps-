@@ -25,7 +25,7 @@ namespace ConsoleAppProject.App01
         // This is a run method which lets the program to run with all the methods. 
         public void Run()
         {
-            /*OutputHeading();
+            OutputHeading();
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -38,7 +38,7 @@ namespace ConsoleAppProject.App01
             CalculateMiles();
             OutputMiles();
           
-            Console.WriteLine();*/
+            Console.WriteLine();
             SelectInputUnit();
             CalculateDistance();
         }
