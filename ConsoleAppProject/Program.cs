@@ -16,12 +16,12 @@ namespace ConsoleAppProject
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             
-            Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
+            Console.WriteLine("BNU CO453 Applications Programming!");
             Console.WriteLine();
             Console.Beep();
 
             DistanceConverter converter = new DistanceConverter();
-            converter.ConvertDistance();
+            converter.Run();
         }
     }
 }
