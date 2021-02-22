@@ -21,6 +21,16 @@ namespace Webinterface.Controllers
             return View();
         }
 
+        public IActionResult BmiCalculator()
+        {
+            return View();
+        }
+
+        public IActionResult StudentMarks()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
