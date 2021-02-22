@@ -15,7 +15,7 @@ namespace ConsoleAppProject
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            
+
             Console.WriteLine("BNU CO453 Applications Programming!");
             Console.WriteLine();
             Console.Beep();

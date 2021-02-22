@@ -37,7 +37,7 @@ namespace ConsoleAppProject.App01
             InputFeets();
             CalculateMiles();
             OutputMiles();
-          
+
             Console.WriteLine();
             SelectInputUnit();
             CalculateDistance();
@@ -120,7 +120,7 @@ namespace ConsoleAppProject.App01
             Console.WriteLine(feet + "feet is  " + Convert.ToDouble(miles) + "miles");
         }
 
-        
+
         // The input unit method essentially provides a Menu for the end user to choose from
         // the different services. 
         private void SelectInputUnit()
@@ -153,7 +153,7 @@ namespace ConsoleAppProject.App01
 
         }
 
-       
+
         // The output unit method is showing which service that has been chosen from the menu
         // and that will determine the action of the method.
         private void SelectOutputUnit()
@@ -268,4 +268,4 @@ namespace ConsoleAppProject.App01
 
 
 
-        
+
