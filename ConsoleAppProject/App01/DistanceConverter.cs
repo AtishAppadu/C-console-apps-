@@ -15,10 +15,12 @@ namespace ConsoleAppProject.App01
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
         public const double FEET_IN_METRES = 3.28084;
-        private double miles;
-        private double feet;
-        private double metres;
-        string choice2;
+        
+        public double Miles { get; set; }
+        public double Feet { get; set; }
+        public double Metres { get; set; }
+
+string choice2;
         string choice1;
 
 
@@ -45,13 +47,13 @@ namespace ConsoleAppProject.App01
         // The method is to calculate miles into the metres.
         private void CalculateMetres()
         {
-            metres = miles * METRES_IN_MILES;
+            Metres = Miles * METRES_IN_MILES;
         }
 
         // A print method to show the output of miles into metres.
         private void OutputMetres()
         {
-            Console.WriteLine(miles + "is equiavalent to " + metres + "metres");
+            Console.WriteLine(Miles + "is equiavalent to " + Metres + "metres");
         }
 
         // heading output for the end user to see when opening the program.
@@ -70,7 +72,7 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine("Please enter the number of miles > ");
             string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
+            Miles = Convert.ToDouble(value);
         }
 
         // My input distance method for choosing which type
@@ -90,34 +92,34 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine("Please enter the number of feet >  ");
             string value = Console.ReadLine();
-            feet = Convert.ToDouble(value);
+            Feet = Convert.ToDouble(value);
         }
 
         // This method is for calculating feet into miles
         private double CalculateMiles()
         {
-            return miles = feet / 5280;
+            return Miles = Feet / 5280;
         }
 
         // The method will calculate the feet
         // 
         private double CalculateFeet()
         {
-            return feet = miles * 5280;
+            return Feet = Miles * 5280;
         }
 
         // It will give out the output in feet.
         // 
         private void OutputFeet()
         {
-            Console.WriteLine(miles + "miles is " + feet + "feet");
+            Console.WriteLine(Miles + "miles is " + Feet + "feet");
         }
 
         // Print out the output in miles.
         // 
         private void OutputMiles()
         {
-            Console.WriteLine(feet + "feet is  " + Convert.ToDouble(miles) + "miles");
+            Console.WriteLine(Feet + "feet is  " + Convert.ToDouble(Miles) + "miles");
         }
 
 

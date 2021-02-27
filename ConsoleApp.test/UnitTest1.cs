@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ConsoleApp.App01;
 
 namespace ConsoleApp.test
 {
@@ -6,8 +7,12 @@ namespace ConsoleApp.test
     public class TestDistanceConverter
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMilesToFeet()
         {
+            DistanceConverter converter = new DistanceConverterConverter()
+            {
+                
+            }
         }
     }
 }
