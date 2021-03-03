@@ -25,6 +25,12 @@ namespace ConsoleAppProject.App02
         public double WeightImperial;
         public double HeightImperial;
 
+
+        /// <summary>
+        /// This method allows the program to run on the console. 
+        /// </summary>
+
+
         public void run()
         {
             OutputHeading();
