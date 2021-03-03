@@ -2,10 +2,12 @@
 namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// The main features of this App is for a user to input their body information such as height and weight in 
+    /// either Imperial or Metric units in order to calculate their BMI and give information wether the user is overweight,
+    /// underweight or healthy.
     /// </summary>
     /// <author>
-    /// Atish version 0.1
+    /// Atish version 0.3
     /// </author>
     public class BMI
     {
@@ -31,6 +33,12 @@ namespace ConsoleAppProject.App02
             CalculateImperial();
             displaybameMessage();
         }
+        
+        /// <summary>
+        /// This method is to show the title of the program when it is 
+        /// being started.
+        /// </summary>
+
         private void OutputHeading()
         {
             Console.WriteLine("\n-------------------");
@@ -38,6 +46,21 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("      By Atish       ");
             Console.WriteLine("\n-------------------");
         }
+
+
+        /// <summary>
+        /// This method allows the user to see the options of whether to 
+        /// input data in imperial or metric. 
+        /// </summary>
+
+
+
+        /// <summary>
+        /// This method is the code that prompts the user to choose an option for either Imperial or metric
+        /// and conditions for either options whether the user chose 1 or 2 
+        /// and an error message if the user chose neither of the shown option.
+        /// </summary>
+   
 
         private void SelectUnitType()
         {
@@ -82,6 +105,11 @@ namespace ConsoleAppProject.App02
             }
         }
             
+        /// <summary>
+        /// This method is the calculate methods where it calculate the imperial units and metric units 
+        /// as there are 2 different calculate methods for each of the units.
+        /// </summary>
+
         public void CalculateMetric()
         {
             MetricBMI = (WeightinKG) / (HeightinMetres *2) ; 
@@ -98,6 +126,14 @@ namespace ConsoleAppProject.App02
             ImperialBMI = (WeightImperial * 703) / (HeightImperial * HeightImperial);
         }
 
+
+
+        /// <summary>
+        /// DisplayBMI method is for the user to see their BMI from their data inputs 
+        /// that provides information whether the user is underweight,overweight or healthy
+        /// and shows which obese class that the user may be in.
+        /// </summary>
+        
         public void DisplayBMI(double BMI)
         {
             if (BMI < 18.50)
@@ -136,6 +172,13 @@ namespace ConsoleAppProject.App02
                 }
 
         }   
+
+        /// <summary>
+        /// BAME message is the method to display a message on different ethnicities and further information on BMI 
+        /// at the bottom of the program/screen. 
+        /// </summary>
+
+
 
         public void displaybameMessage()
         {
