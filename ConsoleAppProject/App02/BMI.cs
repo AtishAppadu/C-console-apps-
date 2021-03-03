@@ -54,20 +54,17 @@ namespace ConsoleAppProject.App02
         }
 
 
+       
         /// <summary>
         /// This method allows the user to see the options of whether to 
         /// input data in imperial or metric. 
         /// </summary>
-
-
-
         /// <summary>
         /// This method is the code that prompts the user to choose an option for either Imperial or metric
         /// and conditions for either options whether the user chose 1 or 2 
         /// and an error message if the user chose neither of the shown option.
         /// </summary>
    
-
         private void SelectUnitType()
         {
             Console.WriteLine(" 1. Metric Units ");
@@ -183,8 +180,6 @@ namespace ConsoleAppProject.App02
         /// BAME message is the method to display a message on different ethnicities and further information on BMI 
         /// at the bottom of the program/screen. 
         /// </summary>
-
-
 
         public void displaybameMessage()
         {
