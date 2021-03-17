@@ -18,7 +18,7 @@ namespace ConsoleAppProject.App03
         public const int GradeC = 50;
         public const int GradeD = 40;
 
-        public const int GradeProfile = "Please see to the grade profile";
+        public const int GRADEPROFILE = "Please see to the grade profile";
 
         //variables and getset method used to make it easier to access for other classes
         // arrays
@@ -84,6 +84,44 @@ namespace ConsoleAppProject.App03
 
             //executes the decision made by the user. 
 
+            private void ExecuteChoices(string choice)
+            {
+                if (choice.Equals("1"))
+                {
+                    InputMarks();
+                }
+                else if (choice.Equals("2"))
+                {
+                    OutputMarks();
+                }
+                else if (choice.Equals("3"))
+                {
+                    OutputStats();
+                }
+                else if (choice.Equals("4"))
+                {
+
+                }
+                else if (choice.Equals("5"))
+                {
+                    Quit(); 
+                }
+                
+            }   
+
+            // Exits the program.
+            public void Quit()
+            {
+                Environment.Exit(0);
+            }
+
+            public string InputMarks()
+            {
+                int mark;
+                int index = 0; 
+
+
+            }
         }
 
 
