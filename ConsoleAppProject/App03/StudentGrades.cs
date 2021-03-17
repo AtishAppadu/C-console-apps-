@@ -1,6 +1,9 @@
 ﻿using System;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+using ConsoleAppProject.Helpers;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using ConsoleAppProject;
 
 
 namespace ConsoleAppProject.App03
@@ -10,120 +13,45 @@ namespace ConsoleAppProject.App03
     /// </summary>
     public class StudentGrades
     {
-        public const int Nostudents = 10;
-        public const int HighestMark = 100;
-        public const int LowestMark = 0;
+        public string[] Students;
+        public int[] Marks;
+
+        public const int Fail = 0;
         public const int GradeA = 70;
         public const int GradeB = 60;
         public const int GradeC = 50;
         public const int GradeD = 40;
-
-        public const int GRADEPROFILE = "Please see to the grade profile";
-
-        //variables and getset method used to make it easier to access for other classes
-        // arrays
-        public string[] Students;
-        public int[] Marks;
-        public int[] GradeProfile;
-        public int[] StatMarks; 
-
-        public double Mean { get; set; }
-        public double Minimum { get; set; }
-        public int Maximum { get; set; }
-
-        public string options;
-
-        //students names array 
-
-        public StudentGrades()
+        
+        public void run()
         {
+
+        }
+        private void OutputHeading()
+        {
+            Console.WriteLine("\n------------------------------");
+            Console.WriteLine("    Welcome to Student Marks!   ");
+            Console.WriteLine("         Made by Atish          ");
+            Console.WriteLine("\n------------------------------");
+        }
+        public void InputMarks()
+        {
+            int mark = 0;
+
+            Marks = new int[10];
             Students = new string[]
             {
-                "James","jones","Rico","Pablo","Jess","Manny","luke","Grabriel","Aniela","Hinori"
-
+                "James","Jones","Hinori","Aniela","Anna","Sam","Billy","Peter","Tom","Wanda"
             };
-            GradeProfile = new int[(int)Grades.A + 1];
-            Marks = new int[Students.Length];
 
-            //This is for the Menu to display for the user
-
-            public void UserSelect()
+            for(int i = 0; i<Students.Length; i++)
             {
-                bool carryOn = true;
-                do
-                {
-                    Console.WriteLine("Hello, welcome to Student Grades!");
-                    Console.WriteLine("       By Atish     ");
-                    Console.WriteLine("Please choose from the List >> ");
-                    string choice = DisplayChoices();
-
-                    ExecuteChoices(choice);
-                } while (carryOn);
-                Quit();
-          
-           
-            
-            }
-
-            // lets the user have the option to choose one from 4 methods 
-            private static string DisplayChoices()
-            {
-                Console.WriteLine();
-                Console.WriteLine("1: Input Marks");
-                Console.WriteLine("2: Output Marks");
-                Console.WriteLine("3: Output Statistics");
-                Console.WriteLine("4: Output Grades Profile");
-                Console.WriteLine("5: Exit Program");
-                Console.WriteLine();
-
-                Console.WriteLine();
-                string choice = Console.ReadLine();
-
-                return choice; 
-            }
-
-            //executes the decision made by the user. 
-
-            private void ExecuteChoices(string choice)
-            {
-                if (choice.Equals("1"))
-                {
-                    InputMarks();
-                }
-                else if (choice.Equals("2"))
-                {
-                    OutputMarks();
-                }
-                else if (choice.Equals("3"))
-                {
-                    OutputStats();
-                }
-                else if (choice.Equals("4"))
-                {
-
-                }
-                else if (choice.Equals("5"))
-                {
-                    Quit(); 
-                }
-                
-            }   
-
-            // Exits the program.
-            public void Quit()
-            {
-                Environment.Exit(0);
-            }
-
-            public string InputMarks()
-            {
-                int mark;
-                int index = 0; 
-
-
+                mark = (int)ConsoleHelper.InputNumber(
+                    "Please Input Student Mark" + Students[i] + ">", 0, 100);
             }
         }
 
 
     }
+
 }
+
