@@ -47,7 +47,9 @@ namespace ConsoleAppProject.App03
             {
                 mark = (int)ConsoleHelper.InputNumber(
                     "Please Input Student Mark" + Students[i] + ">", 0, 100);
+                Marks[i] = mark;
             }
+            Console.WriteLine("\nYou have entered a Mark for the students \n");
         }
 
 
