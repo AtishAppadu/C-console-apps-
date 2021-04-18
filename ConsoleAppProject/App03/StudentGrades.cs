@@ -18,10 +18,10 @@ namespace ConsoleAppProject.App03
         public Grades[] Grade;
 
         public const int Fail = 0;
-        public const int GradeA = 70;
-        public const int GradeB = 60;
-        public const int GradeC = 50;
-        public const int GradeD = 40;
+        public const int FirstClass = 70;
+        public const int UpperSecondClass = 60;
+        public const int LowerSecondClass = 50;
+        public const int ThirdClass = 40;
         
         /// <summary>
         /// THe method run is to run the program with an implemented 
@@ -211,7 +211,7 @@ namespace ConsoleAppProject.App03
                     "Please Input Student Mark" + Students[i] + ">", 0, 100);
                 Marks[i] = mark;
             }
-            Console.WriteLine("\nYou have entered a Mark for the students \n");
+            Console.WriteLine("\nMark has been entered \n");
         }
 
         /// <summary>
@@ -220,14 +220,33 @@ namespace ConsoleAppProject.App03
 
         public Grades CalculateGrade(int Marks)
         {
-            if (Marks >= Fail && < GradeD)
+            if (Marks >= Fail &&Marks < ThirdClass)
             {
                 return Grades.F;
             }
-            else if (Marks >= GradeD && <GradeD) ;
+            else if (Marks >= ThirdClass && Marks < LowerSecondClass )
+            {
+                return Grades.D;
+            }
+            else if (Marks >= LowerSecondClass && Marks < UpperSecondClass)
+            {
+                return Grades.C;
+            }
+            else if (Marks >= UpperSecondClass && Marks < FirstClass)
+            {
+                return Grades.B; 
+            }
+            else
+            {
+                return Grades.A; 
+            }
+            
+
+        
+        }
 
 
-
+        
 
 
 
@@ -238,5 +257,5 @@ namespace ConsoleAppProject.App03
 
     }
 
-}
+
 
