@@ -20,6 +20,7 @@ namespace ConsoleAppProject
             Console.WriteLine("1: Distance converter");
             Console.WriteLine("2: BMI Calculator");
             Console.WriteLine("3: StudentMarks");
+            Console.WriteLine("4: Social Network");
             Console.WriteLine("Please choose your desired Program > ");
             string choice = Console.ReadLine();
 
@@ -33,7 +34,10 @@ namespace ConsoleAppProject
                 App02.BMI converter = new App02.BMI();
                 converter.run(); 
             }
-
+            else if (choice == "3")
+            {
+                App04.DisplayMenu();
+            }
 
 
         }
