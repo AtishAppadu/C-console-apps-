@@ -50,5 +50,13 @@ namespace ConsoleAppProject.App04
         /// (Currently: Print to the text terminal. This is simulating display 
         /// in a web browser for now.)
         ///</summary>
+        public override void Display()
+        {
+            Console.WriteLine();
+            Console.WriteLine($" Filename: [{Filename}]");
+            Console.WriteLine($" Caption: {Caption}");
+            base.Display();
+            Console.WriteLine();
+        }
     }
 }

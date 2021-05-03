@@ -22,7 +22,7 @@ namespace ConsoleAppProject.App04
     {
         public const string AUTHOR = "Atish";
         private readonly List<post> posts;
-        
+
 
         ///<summary>
         /// Construct an empty news feed.
@@ -73,5 +73,59 @@ namespace ConsoleAppProject.App04
 
 
         }
+
+        public void FindUser(string user)
+        {
+            int counter = 0;
+            foreach (post Post in posts)
+            {
+                if (Post.Username == user)
+                {
+                    Post.Display();
+                    Console.WriteLine();
+                    counter++;
+                }
+                if (counter == 0)
+                {
+                    Console.WriteLine("\n This User does not Exist in the current context");
+                }
+
+            }
+        }
+        ///<summary>
+        ///This function is to find a post by using the ID 
+        /// </summary>
+        /// <param name="id"></param>
+        public void FindID(int id)
+        {
+            int counter = 0;
+            foreach (post Post in posts)
+            {
+                if (Post.PostID == id)
+                {
+                    posts.Remove(Post);
+                    Console.WriteLine("You have removed your Post");
+                    return;
+                    counter++;
+                }
+            }
+        }
+        ///<summary>
+        ///This function is to fina a post by id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public post FindPost(int id)
+        {
+            foreach (post Post in posts)
+            {
+                if (id == post.PostID)
+                {
+                    return post;
+                }
+            }
+            return null;
+        }
     }
+
 }

@@ -6,19 +6,22 @@ namespace ConsoleAppProject.App04
 {
     public class post
     {
+        /// <summary>
+        /// This is the variables used and arraylists.
+        /// </summary>
+        public int PostID;
+
+        public string Username;
+
+        public DateTime Timestamp;
+
+        public DateTime Datestamp;
+
+        private static int Instances = 0;
+
         private int likes;
 
-        private readonly List<String> comments;
-
-
-        // username of the post's author
-        public String Username { get; }
-
-        public DateTime Timestamp { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
+        private List<string> comments;
 
         public post(string author)
         {
@@ -94,8 +97,9 @@ namespace ConsoleAppProject.App04
             /// </param> 
             /// <returns>
             /// A relative time string for the given time
-            /// </returns>      
-            private String FormatElapsedTime(DateTime time)
+
+        }   /// </returns>      
+         private String FormatElapsedTime(DateTime time)
             {
                 DateTime current = DateTime.Now;
                 TimeSpan timePast = current - time;
@@ -111,8 +115,13 @@ namespace ConsoleAppProject.App04
                 {
                     return seconds + " seconds ago";
                 }
+         }
+            
+        public int GetNumberOfPosts()
+            {
+                return Instances; 
             }
-        }
+           
     }
 }
 
